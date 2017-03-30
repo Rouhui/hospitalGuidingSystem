@@ -11,14 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('Home/About', function () {
-    return view('hospital.about');
+    return view('welcome');
 });
