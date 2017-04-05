@@ -20,7 +20,7 @@
                         </a>
                     </h1>
                     <div class="pull-right user">
-                        <i class="icon-user"></i><span>患者<a href="#" onclick="login()">登录</a> / <a href="#">注册</a></span>
+                        <i class="icon-user"></i><span>患者<a href="#" onclick="login()">登录</a> / <a href="#" onclick="register()">注册</a></span>
                     </div>
                 </div>
             </div>
@@ -34,12 +34,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav navbar-nav menu">
-                        <li class="active"><a href="{{ url('/')}}">首页</a></li>
-                        <li><a href="{{ url('Home/About')}}">医院介绍</a></li>
-                        <li><a href="#">科室设置</a></li>
-                        <li><a href="#">专家团队</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">便民服务<span class="caret"></span></a>
+                        <li class="{{ Request::getPathInfo() == '/'? 'active': '' }}"><a href="{{ url('/')}}">首页</a></li>
+                        <li class="{{ Request::getPathInfo() == '/Home/About'? 'active': '' }}"><a href="{{ url('Home/About')}}">医院介绍</a></li>
+                        <li class="{{ Request::getPathInfo() == '/Home/Department'? 'active': '' }}"><a href="{{ url('Home/Department')}}">科室设置</a></li>
+                        <li class="{{ Request::getPathInfo() == '/Home/Experts'? 'active': '' }}"><a href="{{ url('Home/Experts')}}">专家团队</a></li>
+                        <li class="dropdown {{ Request::getPathInfo() == '/Home/Service'? 'active': '' }}" id="navbar-item">
+                            <a href="{{ url('Home/Service')}}" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">便民服务<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">智能导诊</a></li>
                                 <li><a href="#">预约挂号</a></li>
@@ -55,21 +55,11 @@
     </div>
 @show
 
-@section('banner')
-    <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="{{ asset('images/ad-3.jpg') }}" alt="placeholder+image">
-                </div>
-            </div>
-        </div>
-    </div>
-@show
+@yield('banner')
 
 <div class="container">
     <div class="row">
-        @yield('content');
+        @yield('content')
     </div>
 </div>
 
@@ -85,7 +75,11 @@
     </div>
 @show
 
+@include('layouts.login')
+@include('layouts.register')
 
+<!-- 遮罩层 -->
+<div id="mask" onclick="cancelLogin()"></div>
 
 <!-- jQuery 文件 -->
 <script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>

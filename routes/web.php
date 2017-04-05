@@ -22,3 +22,18 @@ Route::get('/', function () {
 Route::get('Home/About', function () {
     return view('hospital.about');
 });
+
+Route::get('Home/Service', function () {
+    return view('hospital.service');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('register', ['as' => 'register', function(){
+    return view('hospital.register');
+}]);
+
+Route::get('Home/Service/{id}', ['uses' => 'MemberController@info2'])
+    ->where('id', '[0-9]+');
