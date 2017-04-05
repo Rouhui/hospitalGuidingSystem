@@ -23,10 +23,6 @@ Route::get('Home/About', function () {
     return view('hospital.about');
 });
 
-Route::get('Home/Service', function () {
-    return view('hospital.service');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -37,3 +33,14 @@ Route::get('register', ['as' => 'register', function(){
 
 Route::get('Home/Service/{id}', ['uses' => 'MemberController@info2'])
     ->where('id', '[0-9]+');
+
+Route::group(['middleware' => ['web']], function (){
+    Route::any('Home/Service', ['uses' => 'IndexController@service', 'type'=>'booking']);
+    Route::any('Home/Service/{type}', ['uses' => 'IndexController@subService']);
+
+    Route::any('student/create', ['uses' => 'StudentController@create']);
+    Route::any('student/save', ['uses' => 'StudentController@save']);
+    Route::any('student/update/{id}', ['uses' => 'StudentController@update']);
+    Route::any('student/detail/{id}', ['uses' => 'StudentController@detail']);
+    Route::any('student/delete/{id}', ['uses' => 'StudentController@delete']);
+});

@@ -171,5 +171,20 @@ a {
 .list-group i {
   margin-right: 5px;
 }
+/* about content */
+.introduce-item {
+  padding: 5px;
+}
+.introduce-item .title {
+  font-size: 20px;
+  border-bottom: #3ba3fd 2px solid;
+}
+.introduce-item .content {
+  margin: 10px auto;
+}
+.introduce-item .content p {
+  line-height: 27px;
+  text-indent: 18.0pt;
+}
 
 /*# sourceMappingURL=default.css.map */
