@@ -38,6 +38,7 @@ Route::group(['middleware' => ['web']], function (){
     Route::any('Home/Service', ['uses' => 'IndexController@service', 'type'=>'booking']);
     Route::any('Home/Service/{type}', ['uses' => 'IndexController@subService']);
     Route::any('Home/Department', ['uses' => 'IndexController@department']);
+    Route::any('Home/Department/detail-{id}', ['uses' => 'IndexController@departmentDetail']);
 
     Route::any('student/create', ['uses' => 'StudentController@create']);
     Route::any('student/save', ['uses' => 'StudentController@save']);

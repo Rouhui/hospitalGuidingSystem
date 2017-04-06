@@ -26,4 +26,14 @@ class IndexController extends Controller
                 'type' => $type
             ]);
     }
+
+    public function department(){
+
+
+        return view('hospital.department');
+    }
+
+    public function departmentDetail(){
+        return view('hospital.departmentDetail');
+    }
 }

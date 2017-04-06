@@ -8,6 +8,7 @@
 @color-background: #f3f3f3;
 @color-border-light: #ddd;
 @color-border-dark: #ccc;
+@color-text-light: #888;
 
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
@@ -24,6 +25,13 @@
   margin-top: 10px;
   background-color: @color-primary;
   font-size: 16px;
+}
+
+.content {
+  .clear;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 
 
@@ -244,9 +252,9 @@ a {
 
 /* department-content */
 .content-nav {
-  height: 56px;
+  height: 46px;
   margin-top: 15px;
-  font-size: 16px;
+  font-size: 15px;
 
   .left-nav {
     float: left;
@@ -277,11 +285,8 @@ a {
 }
 
 .department-content {
-  .clear;
+  .content;
   border: @color-border-light solid 1px;
-  background-color: white;
-  margin-bottom: 15px;
-  margin-top: 5px;
 
   .title {
     margin-left: 10px;
@@ -323,6 +328,45 @@ a {
       text-decoration: none;
     }
   }
+}
+
+.department-detail-content {
+  .content;
+  border: #bed8e4 solid 1px;
+
+  .department-info{
+    margin: 0px 25px;
+    line-height: 27px;
+
+    .title{
+      font-weight: bold;
+      color: @color-primary;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    span{
+      color: @color-text-light;
+    }
+
+    .main {
+      margin: 10px auto;
+
+      p{
+        line-height: 27px;
+        text-indent:18.0pt;
+      }
+    }
+  }
+
+  .divider{
+    border-bottom:@color-border-light 1px dashed;
+    width: inherit;
+    height: 15px;
+    margin-left: -25px;
+  }
+
+
 }
 
 

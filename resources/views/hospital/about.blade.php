@@ -33,7 +33,7 @@
                     <li class="active">医院介绍</li>
                 </ol>
             </div>
-            <div class="content">
+            <div class="content-content">
                 <div id="introduce" class="content-item">
                     <div class="title">
                         医院介绍

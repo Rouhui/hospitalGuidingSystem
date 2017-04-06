@@ -38,7 +38,7 @@
                 </div>
                 <div class="main">
                     <div class="dep-item">
-                        <a href="http://www.zy91.com:80/nkxt/481.jhtml"><div class="" id="" title="感染病科">感染病科</div></a>
+                        <a href="{{ url('Home/Department/detail-1')}}"><div class="" id="" title="感染病科">感染病科</div></a>
                     </div>
                     <div class="dep-item">
                         <a href="http://www.zy91.com:80/nkxt/481.jhtml"><div class="" id="" title="感染病科">血液病科</div></a>
