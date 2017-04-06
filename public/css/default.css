@@ -1,6 +1,12 @@
 /*
 * Global setting and mixin
 */
+.btn-default {
+  color: #fff;
+  margin-top: 10px;
+  background-color: #3ba3fd;
+  font-size: 16px;
+}
 /**
 * Global styles
 */
@@ -12,7 +18,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 a {
   text-decoration: none;
@@ -20,7 +26,7 @@ a {
 /* header */
 .header {
   padding-top: 5px;
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 .header .logo {
   margin: 0px;
@@ -123,12 +129,12 @@ a {
   line-height: 30px;
 }
 .login-form .login-btn {
-  width: 260px;
-  height: 40px;
   color: #fff;
   margin-top: 10px;
   background-color: #3ba3fd;
   font-size: 16px;
+  width: 260px;
+  height: 40px;
 }
 .login-form .login-btn:hover {
   background-color: #2e8ddf;
@@ -171,20 +177,95 @@ a {
 .list-group i {
   margin-right: 5px;
 }
+.fixed-left {
+  top: 150px;
+}
 /* about content */
-.introduce-item {
+.content-item {
   padding: 5px;
 }
-.introduce-item .title {
+.content-item .title {
   font-size: 20px;
   border-bottom: #3ba3fd 2px solid;
 }
-.introduce-item .content {
+.content-item .main {
   margin: 10px auto;
 }
-.introduce-item .content p {
+.content-item .main p {
   line-height: 27px;
   text-indent: 18.0pt;
+}
+/* department-content */
+.content-nav {
+  height: 56px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+.content-nav .left-nav {
+  float: left;
+}
+.content-nav .left-nav .breadcrumb {
+  margin: 0;
+}
+.content-nav .right-search {
+  float: right;
+}
+.content-nav .right-search .inputsize {
+  color: #666666;
+}
+.content-nav .right-search .input {
+  width: 135px;
+  height: 25px;
+}
+.content-nav .right-search .button {
+  color: #fff;
+  margin-top: 10px;
+  background-color: #3ba3fd;
+  font-size: 16px;
+  width: 60px;
+  height: 25px;
+}
+.department-content {
+  clear: both;
+  border: #ddd solid 1px;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.department-content .title {
+  margin-left: 10px;
+  height: 52px;
+  line-height: 50px;
+}
+.department-content .main {
+  overflow: hidden;
+}
+.department-content .main .dep-item {
+  float: left;
+  display: inline-block;
+  height: 40px;
+  border: #ccc solid 2px;
+  font-size: 14px;
+  font-weight: 200;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+.department-content .main .dep-item a {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.department-content .main .dep-item:hover {
+  border: #0189C3 solid 2px;
+  background-color: #3ba3fd;
+}
+.department-content .main a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=default.css.map */

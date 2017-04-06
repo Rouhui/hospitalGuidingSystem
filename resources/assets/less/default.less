@@ -5,13 +5,27 @@
 @color-primary: #3ba3fd;
 @color-navbar-active: #0189C3;
 @color-active: #2e8ddf;
-@color-background: #F3F3F3;
+@color-background: #f3f3f3;
+@color-border-light: #ddd;
+@color-border-dark: #ccc;
 
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
 }
+
+.clear() {
+  clear: both;
+}
+
+.btn-default {
+  color: #fff;
+  margin-top: 10px;
+  background-color: @color-primary;
+  font-size: 16px;
+}
+
 
 /**
 * Global styles
@@ -154,12 +168,9 @@ a {
 }
 
 .login-form .login-btn {
+  .btn-default;
   width: 260px;
   height: 40px;
-  color: #fff;
-  margin-top: 10px;
-  background-color: @color-primary;
-  font-size: 16px;
 }
 
 .login-form .login-btn:hover {
@@ -208,8 +219,12 @@ a {
   }
 }
 
+.fixed-left {
+  top: 150px;
+}
+
 /* about content */
-.introduce-item {
+.content-item {
   padding: 5px;
 
   .title {
@@ -217,7 +232,7 @@ a {
     border-bottom: @color-primary 2px solid;
   }
 
-  .content {
+  .main {
     margin: 10px auto;
 
     p{
@@ -226,4 +241,89 @@ a {
     }
   }
 }
+
+/* department-content */
+.content-nav {
+  height: 56px;
+  margin-top: 15px;
+  font-size: 16px;
+
+  .left-nav {
+    float: left;
+
+    .breadcrumb {
+      margin: 0;
+    }
+  }
+
+  .right-search {
+    float: right;
+
+    .inputsize {
+      color: #666666;
+    }
+
+    .input {
+      width: 135px;
+      height: 25px;
+    }
+
+    .button {
+      .btn-default;
+      width: 60px;
+      height: 25px;
+    }
+  }
+}
+
+.department-content {
+  .clear;
+  border: @color-border-light solid 1px;
+  background-color: white;
+  margin-bottom: 15px;
+  margin-top: 5px;
+
+  .title {
+    margin-left: 10px;
+    height:52px;
+    line-height: 50px;
+  }
+
+  .main {
+    overflow: hidden;
+
+    .dep-item{
+      float: left;
+      display: inline-block;
+      height: 40px;
+      border: @color-border-dark solid 2px;
+      font-size: 14px;
+      font-weight: 200;
+      margin-left: 15px;
+      margin-top: 15px;
+      text-align: center;
+      line-height: 40px;
+
+      a {
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .dep-item:hover {
+      border: @color-navbar-active solid 2px;
+      background-color: @color-primary;
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+
 
