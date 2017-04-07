@@ -37,7 +37,7 @@
                         <li class="{{ Request::getPathInfo() == '/'? 'active': '' }}"><a href="{{ url('/')}}">首页</a></li>
                         <li class="{{ Request::getPathInfo() == '/Home/About'? 'active': '' }}"><a href="{{ url('Home/About')}}">医院介绍</a></li>
                         <li class="{{ Request::getPathInfo() == '/Home/Department'? 'active': '' }}"><a href="{{ url('Home/Department')}}">科室设置</a></li>
-                        <li class="{{ Request::getPathInfo() == '/Home/Experts'? 'active': '' }}"><a href="{{ url('Home/Experts')}}">专家团队</a></li>
+                        <li class="{{ Request::getPathInfo() == '/Home/Expert'? 'active': '' }}"><a href="{{ url('Home/Expert')}}">专家团队</a></li>
                         <li class="dropdown {{ strstr( Request::getPathInfo(), '/Home/Service') ? 'active': '' }}" id="navbar-item">
                             <a href="{{ url('Home/Service')}}" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">便民服务<span class="caret"></span></a>
                             <ul class="dropdown-menu">

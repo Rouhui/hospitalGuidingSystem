@@ -1,6 +1,9 @@
 /*
 * Global setting and mixin
 */
+.clear {
+  clear: both;
+}
 .btn-default {
   color: #fff;
   margin-top: 10px;
@@ -12,6 +15,12 @@
   background-color: white;
   margin-bottom: 15px;
   margin-top: 5px;
+}
+.divider {
+  border-bottom: #ddd 1px dashed;
+  width: inherit;
+  height: 15px;
+  margin-left: -25px;
 }
 /**
 * Global styles
@@ -83,10 +92,10 @@ a {
 /* banner */
 .banner {
   text-align: center;
-  height: 150px;
+  height: 130px;
 }
 .banner img {
-  height: 150px;
+  height: 130px;
   width: 100%;
 }
 /* login-dialog */
@@ -300,12 +309,6 @@ a {
   line-height: 27px;
   text-indent: 18.0pt;
 }
-.department-detail-content .divider {
-  border-bottom: #ddd 1px dashed;
-  width: inherit;
-  height: 15px;
-  margin-left: -25px;
-}
 .expert-main {
   background-color: #f9f9f9;
   overflow: hidden;
@@ -328,6 +331,47 @@ a {
   position: relative;
   top: 1px;
   right: 2px;
+}
+/* expert-content */
+.imgdiv,
+.infodiv,
+.detail_btn {
+  height: 145px;
+  float: left;
+  background-color: white;
+}
+.imgdiv {
+  width: 12%;
+}
+.imgdiv img {
+  width: 88px;
+  height: 124px;
+  border: #ddd 1px solid;
+  margin: 15px 0px 0px 15px;
+}
+.infodiv {
+  width: 35%;
+  padding: 15px 0px 0px 0px;
+}
+.infodiv .title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #3ba3fd;
+}
+.infodiv .info-item {
+  margin: 10px 0px 0px 0px;
+}
+.infodiv .info-item span {
+  color: #888;
+}
+.detail_btn {
+  width: 18%;
+  padding-top: 70px;
+}
+.detail_btn a {
+  width: 40px;
+  height: 20px;
+  color: #888;
 }
 
 /*# sourceMappingURL=default.css.map */

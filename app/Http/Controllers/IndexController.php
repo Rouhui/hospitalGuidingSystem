@@ -52,9 +52,16 @@ class IndexController extends Controller
     }
 
     public function departmentDetail($id){
-        $department = DB::table('department')->where('d_id', $id)->first();
+        $department = DB::table('department')->where('d_id', $id)->first ();
         return view('hospital.departmentDetail',[
             'department' => $department
+        ]);
+    }
+
+    public function expert(){
+        $keyword = null;
+        return view('hospital.expert',[
+            'keyword' => $keyword
         ]);
     }
 }
