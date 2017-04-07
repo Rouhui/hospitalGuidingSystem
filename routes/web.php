@@ -34,17 +34,17 @@ Route::get('register', ['as' => 'register', function(){
 Route::get('Home/Service/{id}', ['uses' => 'MemberController@info2'])
     ->where('id', '[0-9]+');
 
-Route::group(['middleware' => ['web']], function (){
+//Route::group(['middleware' => ['web']], function (){
     Route::any('Home/Service', ['uses' => 'IndexController@service', 'type'=>'booking']);
     Route::any('Home/Service/{type}', ['uses' => 'IndexController@subService']);
-    Route::any('Home/Department', ['uses' => 'IndexController@department']);
-    Route::any('Home/Department/detail-{id}', ['uses' => 'IndexController@departmentDetail']);
+    Route::any('Home/Department', ['uses' => 'IndexController@department'])->name('department');
+    Route::any('Home/Department/detail_{id}', ['uses' => 'IndexController@departmentDetail'])->name('departmentDetail');
     Route::any('Home/Expert', ['uses' => 'IndexController@expert']);
-    Route::any('Home/Expert/detail-{id}', ['uses' => 'IndexController@expertDetail']);
+    Route::any('Home/Expert/detail_{id}', ['uses' => 'IndexController@expertDetail']);
 
     Route::any('student/create', ['uses' => 'StudentController@create']);
     Route::any('student/save', ['uses' => 'StudentController@save']);
     Route::any('student/update/{id}', ['uses' => 'StudentController@update']);
     Route::any('student/detail/{id}', ['uses' => 'StudentController@detail']);
     Route::any('student/delete/{id}', ['uses' => 'StudentController@delete']);
-});
+//});

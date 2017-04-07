@@ -28,11 +28,11 @@
             <div class="department-info">
                 <div class="title">基础介绍</div>
                 <div>
-                    <div>科室名称： <span>感染病科</span></div>
-                    <div>负责人： <span>李兰娟 盛吉芳 黄建荣 </span></div>
-                    <div>地理位置： <span>肝炎/感染普通、咨询、专家门诊9号楼2楼；结核门诊9号楼1楼；</span></div>
-                    <div>电话： <span>（0571）87236896</span></div>
-                    <div>电子邮件： <span>Lpxwl2001@zju.edu.cn</span></div>
+                    <div>科室名称： <span>{{ $department->d_name }}</span></div>
+                    <div>负责人： <span>{{ $department->d_director }} </span></div>
+                    <div>地理位置： <span>{{ $department->d_position }}</span></div>
+                    <div>电话： <span>{{ $department->d_phone }}</span></div>
+                    <div>电子邮件： <span>{{ $department->d_email }}</span></div>
                 </div>
             </div>
             <div class="divider"></div>
