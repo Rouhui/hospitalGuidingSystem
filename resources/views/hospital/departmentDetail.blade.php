@@ -37,6 +37,92 @@
             </div>
             <div class="divider"></div>
             <div class="department-info">
+                <div class="title">专家介绍 （按拼音首字母排序）</div>
+                <div class="expert-main">
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
+                        <div class="expert-item">
+                            <img src="{{asset('images/item-icon.png')}}">李兰娟
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="department-info">
                 <div class="title">工作职责</div>
                 <div class="main">
                     <p>感染病科是目前国内综合性医院同类学科中，规模最大的临床医疗科室之一，中国工程院院士李兰娟教授担任传染病诊治国家重点实验室主任。病区面积23000平方米，开放床位数260张，年门诊量10 万余人次，年住院量6千余人次。建有人工肝治疗中心、重症监护病房、感染性疾病、病毒性肝炎、结核病和艾滋病等10个诊疗病区。长期从事不明原因发热、细菌感染性疾病、病毒性肝炎、肝硬化和新发、再发传染病的临床诊治工作，积累了丰富的临床经验并探索出一套完整的诊断思路和治疗方案，收治病种齐全，病人来源广泛，医疗服务立足浙江，辐射全国乃至国际。以重型肝炎肝衰竭诊治为传统优势医疗项目，创建了人工肝支持系统等多项具有核心竞争力的临床诊治技术，治疗重型肝炎取得重大突破，并推广至全国各地，保证了学科在该领域的国际领先地位。</p>
