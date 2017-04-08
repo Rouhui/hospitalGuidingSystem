@@ -335,6 +335,7 @@ a {
 /* expert-content */
 .imgdiv,
 .infodiv,
+.infodiv2,
 .detail_btn {
   height: 145px;
   float: left;
@@ -349,23 +350,31 @@ a {
   border: #ddd 1px solid;
   margin: 15px 0px 0px 15px;
 }
-.infodiv {
-  width: 35%;
+.infodiv,
+.infodiv2 {
+  width: 40%;
   padding: 15px 0px 0px 0px;
 }
-.infodiv .title {
+.infodiv .title,
+.infodiv2 .title {
   font-weight: bold;
   font-size: 15px;
   color: #3ba3fd;
 }
-.infodiv .info-item {
+.infodiv .info-item,
+.infodiv2 .info-item {
   margin: 10px 0px 0px 0px;
 }
-.infodiv .info-item span {
+.infodiv .info-item span,
+.infodiv2 .info-item span {
   color: #888;
 }
+.infodiv2 {
+  width: 30%;
+  padding-top: 35px;
+}
 .detail_btn {
-  width: 18%;
+  width: 13%;
   padding-top: 70px;
 }
 .detail_btn a {

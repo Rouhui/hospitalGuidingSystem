@@ -42,7 +42,7 @@
                     <div class="main">
                         @foreach($type->items as $item)
                             <div class="dep-item">
-                            <a href="{{ route('departmentDetail',['id' => $item->id]) }}"><div class="" id="" title="{{$item->name}}">{{$item->name}}</div></a>
+                            <a href="{{ route('departmentDetail',['id' => $item->no]) }}"><div class="" id="" title="{{$item->name}}">{{$item->name}}</div></a>
                         </div>
                         @endforeach
                     </div>

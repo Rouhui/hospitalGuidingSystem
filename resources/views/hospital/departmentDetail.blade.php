@@ -28,11 +28,11 @@
             <div class="department-info">
                 <div class="title">基础介绍</div>
                 <div>
-                    <div>科室名称： <span>{{ $department->d_name }}</span></div>
-                    <div>负责人： <span>{{ $department->d_director }} </span></div>
-                    <div>地理位置： <span>{{ $department->d_position }}</span></div>
-                    <div>电话： <span>{{ $department->d_phone }}</span></div>
-                    <div>电子邮件： <span>{{ $department->d_email }}</span></div>
+                    <div>科室名称： <span>{{ $department->dept_name }}</span></div>
+                    <div>负责人： <span>{{ $department->dept_director }} </span></div>
+                    <div>地理位置： <span>{{ $department->dept_position }}</span></div>
+                    <div>电话： <span>{{ $department->dept_phone }}</span></div>
+                    <div>电子邮件： <span>{{ $department->dept_email }}</span></div>
                 </div>
             </div>
             <div class="divider"></div>

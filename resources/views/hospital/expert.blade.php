@@ -33,64 +33,29 @@
             </div>
         </div>
         <div class="content">
-            <div class="expert-item">
-                <div class="imgdiv"><img src="{{ asset('/images/database/expert-1.jpg') }}" alt="郑树森"></div>
+            @foreach($doctors as $doctor)
+                <div class="expert-item">
+                    <div class="imgdiv"><img src="{{ asset('/images/database/'.$doctor->d_photo) }}" alt="{{ $doctor->d_name }}"></div>
 
-                <div class="infodiv">
-                    <div class="title">郑树森</div>
-                    <div class="info-item">科室名称：<span>肝胆胰外科、肝胰移植科</span></div>
-                    <div class="info-item">职称：<span>中国工程院院士、教授、主任医师、博士生导师</span></div>
-                    <div class="info-item" title="肝胆胰外科肿瘤诊治、器官移植">擅长：<span>肝胆胰外科肿瘤诊治、器官移植</span></div>
-                </div>
+                    <div class="infodiv">
+                        <div class="title">{{ $doctor->d_name }}</div>
+                        <div class="info-item">科室名称：<span>{{ $doctor->dept_name }}</span></div>
+                        <div class="info-item">职称：<span>{{ $doctor->d_jobtitle }}</span></div>
+                        <div class="info-item">擅长：<span>{{ $doctor->d_expert }}</span></div>
+                    </div>
 
-                <div class="infodiv">
-                    {{--<div class="jbxx3">--}}
-                    {{--<iframe scrolling="no" style="width: 330px;height: 110px;" id="iframe" frameborder="0" src="/zyyy/paiban/yylist.html?gh=1283"></iframe>--}}
-                    {{--</div>--}}
+                    <div class="infodiv2">
+                        <div class="info-item">门诊时间：<span>周一上午</span></div>
+                        <div class="info-item">门诊地点：<span>门诊八楼</span></div>
+                        <div class="info-item">挂号费用：<span>周一300元</span></div>
+                    </div>
+                    <div class="detail_btn">
+                        <a href="{{ route('expertDetail',['id' => $doctor->d_no]) }}">查看</a>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div class="detail_btn">
-                    <a href="{{ route('expertDetail',['id' => 0]) }}">查看</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="divider"></div>
-            <div class="expert-item">
-                <div class="imgdiv"><img src="{{ asset('/images/database/expert-1.jpg') }}" alt="郑树森"></div>
-
-                <div class="infodiv">
-                    <div class="title">郑树森</div>
-                    <div class="info-item">科室名称：<span>肝胆胰外科、肝胰移植科</span></div>
-                    <div class="info-item">职称：<span>中国工程院院士、教授、主任医师、博士生导师</span></div>
-                    <div class="info-item" title="肝胆胰外科肿瘤诊治、器官移植">擅长：<span>肝胆胰外科肿瘤诊治、器官移植</span></div>
-                </div>
-
-                <div class="infodiv">
-                    {{--<div class="jbxx3">--}}
-                    {{--<iframe scrolling="no" style="width: 330px;height: 110px;" id="iframe" frameborder="0" src="/zyyy/paiban/yylist.html?gh=1283"></iframe>--}}
-                    {{--</div>--}}
-                </div>
-                <div class="detail_btn">
-                    <a href="{{ route('expertDetail',['id' => 0]) }}">查看</a>
-                </div>
-            </div>
-
-
-            {{--@foreach($department_type as $type)--}}
-                {{--@if( count($type->items) != 0)--}}
-                {{--<div class="content-item">--}}
-                    {{--<div class="title">--}}
-                       {{--{{ $type->dt_name }}--}}
-                    {{--</div>--}}
-                    {{--<div class="main">--}}
-                        {{--@foreach($type->items as $item)--}}
-                            {{--<div class="dep-item">--}}
-                            {{--<a href="{{ route('departmentDetail',['id' => $item->id]) }}"><div class="" id="" title="{{$item->name}}">{{$item->name}}</div></a>--}}
-                        {{--</div>--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--@endif--}}
-            {{--@endforeach--}}
+                <div class="divider"></div>
+            @endforeach
         </div>
     </div>
 @stop
