@@ -37,7 +37,7 @@ class IndexController extends Controller
             if($keyword != null){
                 $type->items = DB::table('department')
                     ->select('dept_no as no', 'dept_name as name')
-                    ->where('dt_no ', $type->dt_no)
+                    ->where('dt_no', $type->dt_no)
                     ->where('dept_name', 'like', "%$keyword%")
                     ->get();
             }else{
@@ -54,18 +54,26 @@ class IndexController extends Controller
     public function departmentDetail($id){
         $department = DB::table('department')->where('dept_no', $id)->first ();
         $doctors = DB::table('doctor')
-            ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
+            ->where('dept_no', $id)
             ->get();
         return view('hospital.departmentDetail',[
-            'department' => $department
+            'department' => $department,
+            'doctors' => $doctors
         ]);
     }
 
-    public function expert(){
-        $keyword = null;
-        $doctors = DB::table('doctor')
-            ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
-            ->paginate(6);
+    public function expert(Request $request){
+        $keyword = $request->input('keyword', null);
+        if($keyword != null){
+            $doctors = DB::table('doctor')
+                ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
+                ->where('d_name', 'like', "%$keyword%")
+                ->paginate(6);
+        }else{
+            $doctors = DB::table('doctor')
+                ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
+                ->paginate(6);
+        }
         return view('hospital.expert',[
             'doctors' => $doctors,
             'keyword' => $keyword

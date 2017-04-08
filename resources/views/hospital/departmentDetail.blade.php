@@ -39,86 +39,13 @@
             <div class="department-info">
                 <div class="title">专家介绍 （按拼音首字母排序）</div>
                 <div class="expert-main">
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
-                    <a href="Home/Expert/detail-id" style="font-size: 15px;">
-                        <div class="expert-item">
-                            <img src="{{asset('images/item-icon.png')}}">李兰娟
-                        </div>
-                    </a>
+                    @foreach($doctors as $doctor)
+                        <a href="{{ route('expertDetail', ['id'=>$doctor->d_no]) }}">
+                            <div class="expert-item">
+                                <img src="{{asset('images/item-icon.png')}}">{{ $doctor->d_name }}
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
             <div class="divider"></div>

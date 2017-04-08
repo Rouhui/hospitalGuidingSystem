@@ -23,7 +23,7 @@
                 </ol>
             </div>
             <div class="right-search">
-                <form id="search-department-form" action="{{ route('department') }}" >
+                <form id="search-department-form" action="{{ route('expert') }}" >
                     {{ csrf_field() }}
                     <span class="inputsize">医生搜索:</span>&nbsp;&nbsp;
                     <input class="input" type="text" id="keyword" name="keyword" value="{{ $keyword }}">
