@@ -79,4 +79,14 @@ class IndexController extends Controller
             'keyword' => $keyword
         ]);
     }
+
+    public function expertDetail($id){
+        $doctor = DB::table('doctor')
+            ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
+            ->where('d_no', $id)
+            ->first();
+        return view('hospital.expertDetail',[
+            'doctor' => $doctor
+        ]);
+    }
 }
