@@ -26,14 +26,6 @@
         </div>
         <div class="department-detail-content">
             <div class="expert-item">
-                {{--<div class="title">基础介绍</div>--}}
-                {{--<div>--}}
-                    {{--<div>科室名称： <span>{{ $doctor->dept_name }}</span></div>--}}
-                    {{--<div>负责人： <span>{{ $department->dept_director }} </span></div>--}}
-                    {{--<div>地理位置： <span>{{ $department->dept_position }}</span></div>--}}
-                    {{--<div>电话： <span>{{ $department->dept_phone }}</span></div>--}}
-                    {{--<div>电子邮件： <span>{{ $department->dept_email }}</span></div>--}}
-                {{--</div>--}}
                 <div>
                     <div class="imgdiv"><img src="{{ asset('/images/database/'.$doctor->d_photo) }}" alt="{{ $doctor->d_name }}"></div>
 

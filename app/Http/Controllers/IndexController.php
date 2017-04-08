@@ -14,20 +14,19 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     // 便民服务页面
-    public function service(){
-//        $students = Student::paginate(8);
-//        return view('student.index',
-//            [
-//                'students' => $students
-//            ]);
-        return view('hospital.service');
-    }
-
-    public function subService($type){
-        return view('hospital.service',
-            [
-                'type' => $type
-            ]);
+    public function service(Request $request, $type){
+        $para = [ 'type' => $type ];
+        $keyword = $request->input('keyword', null);
+        if($type == "queryPrice"){
+            if($keyword != null){
+                $medical = DB::table('medical')->where('m_name', 'like', "%$keyword%")->paginate(20);
+            }else{
+                $medical = DB::table('medical')->paginate(20);
+            }
+            $para['medical'] = $medical;
+            $para['keyword'] = $keyword;
+        }
+        return view('hospital.service',$para);
     }
 
     public function department(Request $request){

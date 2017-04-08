@@ -192,8 +192,8 @@ a {
 .list-group i {
   margin-right: 5px;
 }
-.fixed-left {
-  top: 150px;
+table thead {
+  background: #ecf9ff;
 }
 /* about content */
 .content-item {

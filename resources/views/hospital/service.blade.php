@@ -16,12 +16,12 @@
     <div class="col-md-3">
         <div class="left-part">
             <div class="list-group">
-                <a href="{{ url('Home/Service') }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service'? 'active': '' }}"><i class="icon-stethoscope"></i>智能导诊</a>
-                <a href="{{ url('Home/Service',['type'=>'booking']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/booking'? 'active': '' }}"><i class="icon-user-md"></i>门诊预约</a>
-                <a href="{{ url('Home/Service',['type'=>'queryPrice']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryPrice'? 'active': '' }}"><i class="icon-stethoscope"></i>价格查询</a>
-                <a href="{{ url('Home/Service',['type'=>'queryBill']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryBill'? 'active': '' }}"><i class="icon-stethoscope"></i>费用清单查询</a>
-                <a href="{{ url('Home/Service',['type'=>'queryReport']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryReport'? 'active': '' }}"><i class="icon-list-alt"></i>检查单/检验单查询</a>
-                <a href="{{ url('Home/Service',['type'=>'print']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/print'? 'active': '' }}"><i class="icon-print"></i>打印</a>
+                <a href="{{ route('service',['type'=>'guiding']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service'? 'active': '' }}"><i class="icon-stethoscope"></i>智能导诊</a>
+                <a href="{{ route('service',['type'=>'booking']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/booking'? 'active': '' }}"><i class="icon-user-md"></i>门诊预约</a>
+                <a href="{{ route('service',['type'=>'queryPrice']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryPrice'? 'active': '' }}"><i class="icon-stethoscope"></i>药品价格查询</a>
+                <a href="{{ route('service',['type'=>'queryBill']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryBill'? 'active': '' }}"><i class="icon-stethoscope"></i>费用清单查询</a>
+                <a href="{{ route('service',['type'=>'queryReport']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryReport'? 'active': '' }}"><i class="icon-list-alt"></i>检查单/检验单查询</a>
+                <a href="{{ route('service',['type'=>'print']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/print'? 'active': '' }}"><i class="icon-print"></i>打印</a>
             </div>
         </div>
     </div>
