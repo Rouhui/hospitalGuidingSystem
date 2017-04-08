@@ -65,7 +65,7 @@ class IndexController extends Controller
         $keyword = null;
         $doctors = DB::table('doctor')
             ->join('department', 'doctor.dept_no', '=', 'department.dept_no')
-            ->get();
+            ->paginate(6);
         return view('hospital.expert',[
             'doctors' => $doctors,
             'keyword' => $keyword

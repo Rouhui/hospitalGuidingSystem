@@ -56,6 +56,13 @@
                 </div>
                 <div class="divider"></div>
             @endforeach
+
+            <div style="background: white; width: 100%; height: 70px;">
+                <div class="pull-right">
+                    {{ $doctors->links() }}
+                </div>
+            </div>
+
         </div>
     </div>
 @stop
