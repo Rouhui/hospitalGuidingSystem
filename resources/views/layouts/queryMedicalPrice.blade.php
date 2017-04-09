@@ -26,7 +26,7 @@
                 <td>{{ $item->m_name }}</td>
                 <td>{{ $item->m_unit }}</td>
                 <td>{{ $item->m_specification }}</td>
-                <td>{{ $item->m_price }}</td>
+                <td>￥{{ $item->m_price }}</td>
                 <td>{{ $item->m_type }}</td>
                 <td>{{ $item->m_orgin }}</td>
             </tr>

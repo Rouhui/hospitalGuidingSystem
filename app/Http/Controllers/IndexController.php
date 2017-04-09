@@ -17,13 +17,25 @@ class IndexController extends Controller
     public function service(Request $request, $type){
         $para = [ 'type' => $type ];
         $keyword = $request->input('keyword', null);
-        if($type == "queryPrice"){
+        // 查询药品价格
+        if($type == "queryMedicalPrice"){
             if($keyword != null){
                 $medical = DB::table('medical')->where('m_name', 'like', "%$keyword%")->paginate(20);
             }else{
                 $medical = DB::table('medical')->paginate(20);
             }
             $para['medical'] = $medical;
+            $para['keyword'] = $keyword;
+        }
+        // 查询医疗服务价格
+        if($type == 'queryTreatmentPrice'){
+            $num = count( DB::table('treatment')->select(DB::raw('distinct t_type'))->get() );
+            $treatments = array();
+            for( $i = 1; $i <= $num; ++$i){
+                $item = DB::table('treatment')->where('t_type', $i)->get();
+                array_push( $treatments, $item);
+            }
+            $para['treatments'] = $treatments;
             $para['keyword'] = $keyword;
         }
         return view('hospital.service',$para);

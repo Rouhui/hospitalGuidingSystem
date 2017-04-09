@@ -42,7 +42,7 @@
                             <a href="{{ url('Home/Service/booking')}}" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">便民服务<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">智能导诊</a></li>
-                                <li><a href="#">预约挂号</a></li>
+                                <li><a href="#">门诊排班</a></li>
                                 <li><a href="#">价格查询</a></li>
                                 <li><a href="#">费用清单查询</a></li>
                                 <li><a href="#">检验检查查询</a></li>
