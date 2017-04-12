@@ -35,13 +35,21 @@ class IndexController extends Controller
                         ->where('schedule.dept_no', $deptNo)
                         ->where('time', $time)
                         ->get();
+                    $len = count($schedule);
+                    for($j = 0 ; $j < $len ; $j++){
+                        $reg = DB::table('registration')->where('s_no', $schedule[$j]->s_no)->get();
+                        $remainNum = $schedule[$j]->num - count($reg);
+                        $schedule[$j]->remainNum = $remainNum;
+                    }
                     if(count($schedule) != 0){
                         $weekday = "星期".mb_substr( "日一二三四五六",date("w",time() + $i * 86400),1,"utf-8" );
 //                        $weekday = date('w', time() + $i * 86400);
                         $schedules[$time.' '.$weekday] =  $schedule;
+                        $deptName = $schedule[0]->dept_name;
                     }
                 }
                 $para['schedules'] = $schedules;
+                $para['deptName'] = $deptName;
             }
         }
 

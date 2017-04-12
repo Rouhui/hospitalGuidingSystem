@@ -1,5 +1,5 @@
 <div class="title1" style="border: none">
-    当前科室： 口腔内科
+    当前科室： {{ $deptName }}
 </div>
 <div class="title1">
     排班列表
@@ -30,7 +30,7 @@
                         <td>{{ $item->period == 1 ? '上午' : '下午'}}</td>
                         <td>{{ $item->price }}</td>
                         <td>{{ $item->num }}</td>
-                        <td></td>
+                        <td>{{ $item->remainNum }}</td>
                     </tr>
                 @endforeach
                 </tbody>
