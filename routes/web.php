@@ -37,7 +37,6 @@ Route::get('register', ['as' => 'register', function(){
     Route::any('Home/Department/detail_{id}', ['uses' => 'IndexController@departmentDetail'])->name('departmentDetail');
     Route::any('Home/Expert', ['uses' => 'IndexController@expert'])->name('expert');;
     Route::any('Home/Expert/detail_{id}', ['uses' => 'IndexController@expertDetail'])->name('expertDetail');
-    Route::any('Home/Service', ['uses' => 'IndexController@service', 'type'=>'booking']);
     Route::any('Home/Service/{type}', ['uses' => 'IndexController@service'])->name('service');
 
     Route::any('student/create', ['uses' => 'StudentController@create']);

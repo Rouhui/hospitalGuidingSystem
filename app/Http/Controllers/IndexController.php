@@ -17,6 +17,31 @@ class IndexController extends Controller
     public function service(Request $request, $type){
         $para = [ 'type' => $type ];
         $keyword = $request->input('keyword', null);
+        $deptNo = $request->input('id', null);
+        // 门诊预约
+        if($type == 'schedule'){
+            $departments = DB::table('department')->get();
+            $para['departments'] = $departments;
+        }
+        if($type == 'schedule2'){
+            if($deptNo != null){
+                $schedules = array();
+                for ($i = 0; $i < 6; ++ $i){
+                    $time = date('Y-m-d', time() + $i * 86400);
+                    $schedule = DB::table('schedule')
+                        ->where('dept_no', $deptNo)
+                        ->where('time', $time)
+                        ->get();
+                    if(count($schedule) != 0){
+                        $weekday = "星期".mb_substr( "日一二三四五六",date("w",time() + $i * 86400),1,"utf-8" );
+//                        $weekday = date('w', time() + $i * 86400);
+                        $schedules[$time.' '.$weekday] =  $schedule;
+                    }
+                }
+                $para['schedules'] = $schedules;
+            }
+        }
+
         // 查询药品价格
         if($type == "queryMedicalPrice"){
             if($keyword != null){

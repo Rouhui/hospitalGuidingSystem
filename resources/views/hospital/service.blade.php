@@ -17,7 +17,7 @@
         <div class="left-part">
             <div class="list-group">
                 <a href="{{ route('service',['type'=>'guiding']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service'? 'active': '' }}"><i class="icon-stethoscope"></i>智能导诊</a>
-                <a href="{{ route('service',['type'=>'booking']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/booking'? 'active': '' }}"><i class="icon-user-md"></i>门诊排班</a>
+                <a href="{{ route('service',['type'=>'schedule']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/schedule'? 'active': '' }}"><i class="icon-user-md"></i>门诊排班</a>
                 <a href="{{ route('service',['type'=>'queryMedicalPrice']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryMedicalPrice'? 'active': '' }}"><i class="icon-stethoscope"></i>药品价格</a>
                 <a href="{{ route('service',['type'=>'queryTreatmentPrice']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryTreatmentPrice'? 'active': '' }}"><i class="icon-stethoscope"></i>医疗价格</a>
                 <a href="{{ route('service',['type'=>'queryBill']) }}" class="list-group-item {{ Request::getPathInfo() == '/Home/Service/queryBill'? 'active': '' }}"><i class="icon-stethoscope"></i>费用清单查询</a>
@@ -28,20 +28,21 @@
     </div>
     <div class="col-md-9">
         <div class="right-part">
-            <div class="content-header">
-                <ol class="breadcrumb">
-                    当前位置：
-                    <li><a href="{{ url('/')}}">首页</a></li>
-                    <li><a href="{{ url('Home/Service')}}">便民服务</a></li>
-                    <li class="active">
-                        @if( strstr( Request::getPathInfo(), 'queryMedicalPrice') )
-                            药品价格
-                        @elseif( strstr( Request::getPathInfo(), 'queryTreatmentPrice') )
-                            医疗价格
-                        @endif
-                    </li>
-                </ol>
-            </div>
+            {{--<div class="content-header">--}}
+                {{--<ol class="breadcrumb">--}}
+                    {{--当前位置：--}}
+                    {{--<li><a href="{{ url('/')}}">首页</a></li>--}}
+                    {{--<li class="active">--}}
+                        {{--@if( strstr( Request::getPathInfo(), 'queryMedicalPrice') )--}}
+                            {{--药品价格--}}
+                        {{--@elseif( strstr( Request::getPathInfo(), 'queryTreatmentPrice') )--}}
+                            {{--医疗价格--}}
+                        {{--@elseif( strstr( Request::getPathInfo(), 'schedule') )--}}
+                            {{--门诊排班--}}
+                        {{--@endif--}}
+                    {{--</li>--}}
+                {{--</ol>--}}
+            {{--</div>--}}
             <div class="content">
                 @if(isset($type))
                     @include('layouts.'.$type)
