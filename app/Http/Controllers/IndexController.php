@@ -29,7 +29,10 @@ class IndexController extends Controller
                 for ($i = 0; $i < 6; ++ $i){
                     $time = date('Y-m-d', time() + $i * 86400);
                     $schedule = DB::table('schedule')
-                        ->where('dept_no', $deptNo)
+                        ->select('schedule.*', 'department.dept_name', 'doctor.d_name', 'doctor.d_jobtitle')
+                        ->join('department', 'schedule.dept_no', '=', 'department.dept_no')
+                        ->join('doctor', 'schedule.d_no', '=', 'doctor.d_no')
+                        ->where('schedule.dept_no', $deptNo)
                         ->where('time', $time)
                         ->get();
                     if(count($schedule) != 0){
