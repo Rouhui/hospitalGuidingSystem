@@ -252,10 +252,10 @@ table thead {
   height: 52px;
   line-height: 50px;
 }
-.department-content .main {
+.main {
   overflow: hidden;
 }
-.department-content .main .dep-item {
+.main .dep-item {
   float: left;
   display: inline-block;
   height: 40px;
@@ -267,20 +267,28 @@ table thead {
   text-align: center;
   line-height: 40px;
 }
-.department-content .main .dep-item a {
+.main .dep-item a {
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
   overflow: hidden;
   white-space: nowrap;
 }
-.department-content .main .dep-item:hover {
+.main .dep-item a:hover {
+  color: white;
+  text-decoration: none;
+}
+.main .dep-item:hover {
   border: #0189C3 solid 2px;
   background-color: #3ba3fd;
 }
-.department-content .main a:hover {
-  color: white;
-  text-decoration: none;
+.title1 {
+  line-height: 36px;
+  border-bottom: 1px solid #ddd;
+  color: #333333;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 12px;
 }
 .department-detail-content {
   clear: both;
@@ -381,6 +389,83 @@ table thead {
   width: 40px;
   height: 20px;
   color: #888;
+}
+/* schedule_item */
+.schedule_item {
+  margin-left: 15px;
+}
+/* report-content */
+.report-content > div {
+  clear: both;
+  overflow: auto;
+  border-bottom: 1px solid #ddd;
+}
+.report-content {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.report-content .report-nav .title {
+  float: left;
+  line-height: 36px;
+  border-bottom: 1px solid #ddd;
+  color: #333333;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 12px;
+  border: none;
+}
+.report-content .report-nav .tip {
+  float: right;
+  margin-top: 15px;
+}
+.report-content .report-nav .tip a {
+  color: #888;
+  text-decoration: underline;
+}
+.report-content form {
+  height: 57px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.report-content form .right-part {
+  float: right;
+}
+.report-content form .right-part label {
+  font-weight: normal;
+}
+.report-content form .right-part button {
+  color: white;
+  background-color: #3ba3fd;
+  width: 40px;
+}
+.report-content form .left-part {
+  float: left;
+}
+.report-content .info-item {
+  height: 75px;
+  margin: 15px 30px 0px 10px;
+}
+.report-content .info-item .basic-info {
+  float: left;
+  width: 24%;
+  height: auto;
+  margin: 15px 0px 0px 0px;
+}
+.report-content .info-item .basic-info1 {
+  float: left;
+  width: 24%;
+  height: auto;
+  margin: 15px 0px 0px 0px;
+  width: 40%;
+}
+.report-content .info-item span {
+  color: #888;
+}
+.report-content .info-item .xmjg {
+  float: left;
+  width: 75px;
+  background-color: white;
+  height: 25px;
 }
 
 /*# sourceMappingURL=default.css.map */
